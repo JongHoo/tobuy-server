@@ -1,10 +1,10 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose'
 import { now, Document } from 'mongoose'
 
-export type TobuyDocument = Tobuy & Document
+export type ProductDocument = Product & Document
 
 @Schema()
-export class Tobuy {
+export class Product {
   @Prop()
   title: string
 
@@ -21,4 +21,4 @@ export class Tobuy {
   createdAt: Date
 }
 
-export const TobuySchema = SchemaFactory.createForClass(Tobuy)
+export const ProductSchema = SchemaFactory.createForClass(Product)
